@@ -1,5 +1,17 @@
+@font-face {
+  font-family: "Nasa";
+  src: url("../src/Nasa.ttf") format("truetype");
+  font-weight: bold;
+}
+
+*{
+  font-family: "Nasa";
+}
+
 .App {
   text-align: center;
+  font-family: sans-serif;
+  color: white;
 }
 
 .App-logo {
@@ -12,6 +24,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 .App-header {
   background-color: #282c34;
@@ -36,3 +49,182 @@
     transform: rotate(360deg);
   }
 }
+
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(13deg, #f9d4ff 13%,#c7ceff 64%);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(13deg, #c7ceff 14%,#f9d4ff 64%);
+}
+
+.addbtn {
+  box-shadow: 0px 0px 16px 2px #23395e;
+	background-color:transparent;
+	border-radius:25px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	padding:3px 5px ;
+	text-decoration:none;
+}
+.addbtn:hover {
+  background-color:transparent;
+}
+.addbtn:active {
+  position:relative;
+	top:1px;
+}
+
+body {
+  z-index: 0; 
+  background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center; 
+  animation: move-twink-back 600s linear infinite;
+}
+
+a {
+  text-decoration: none;
+  color: #E9BEE4;
+  border-radius: .25rem;
+  transition: all .3s;
+  font-size: 25px;
+}
+
+a:hover {
+  opacity: .6;
+}
+
+ul {
+  text-transform:uppercase;
+  list-style-type: none;
+  margin: 0;
+  background-color: rgb(29, 29, 29);
+  position:fixed;
+  top: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 15em;
+  align-items: center;
+}
+
+.logo{
+  height: 10vh;
+  animation: App-logo-spin infinite 10s linear;
+}
+
+#searchResults{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto);
+  grid-gap: 25px;
+}
+
+.favourites img {
+  width: 50vh ;
+  height: 50vh ;
+  border-radius: 20rem;
+  animation: glow2 5s ease-in-out infinite alternate;
+}
+
+.favourites div {
+  margin: 10px;
+}
+
+.favourites span{
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.s{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(auto);
+  grid-gap: 25px;
+  animation: glow 5s ease-in-out infinite alternate;
+}
+
+.search img{
+  width: 30vh ;
+  height: 30vh ;
+  border-radius: 20rem;
+  box-shadow: 0px 0px 16px 2px #23395e;
+}
+
+.search div{
+  margin: 10px;
+}
+
+input{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: inherit;
+  width: 21%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.apod {
+  display: grid;
+  margin: 50px;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+#apodImg{
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80vh;
+  width: 80vw;
+  animation: glow2 2s ease-in-out infinite alternate;
+}
+
+
+.routes{
+  margin-top: 100px;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgb(132, 0, 255), 0 0 20px rgb(66, 0, 173), 0 0 30px blue ;
+  }
+  to {
+    text-shadow:  0 0 10px rgb(132, 0, 255), 0 0 20px rgb(66, 0, 173), 0 0 30px blue;
+  }
+}
+
+@keyframes glow2 {
+  from {
+    /* box-shadow: 0 0 0 white ; */
+  }
+  to {
+    box-shadow:   0 0 10px white;
+  }
+}
+
+@keyframes glow3 {
+  from {
+    box-shadow: 0 0 0.1px white ;
+  }
+  to {
+    box-shadow:   0 0 5px white;
+  }
+}
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
