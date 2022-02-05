@@ -15,7 +15,7 @@ function App() {
             <li><Link to="/">Home </Link></li>
             <li><Link to="/search">Search </Link></li>
             <li><Link to="/favourites">Favourites </Link></li>
-            <li><img className="logo" src="https://lh3.googleusercontent.com/proxy/1QCcUbh3eqWHDa5J6KyizVdhXBy1daoR-ZGTPyWbIyN9izU_IXK98GOSMhIq_QaYL19LMz24dalVjqBTYUEy7bdAM_xIN2saSFuaTKXuwA_PzZhV" alt="" /></li>
+            <li><img className="logo" src="https://www.pngall.com/wp-content/uploads/5/NASA-Logo-PNG-High-Quality-Image.png" alt="" /></li>
             </ul>
           </nav>
         </div>

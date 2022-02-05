@@ -3,11 +3,17 @@ import MediaCard from "./MediaCard"
 const axios = require('axios');
 
 export default function Search() {
-	const [input, setinput] = useState({ input: "" })
+	const [input, setinput] = useState('')
 	const [results, setResults] = useState([])
 
 	const addToFavourites = async (url) => {
 		await axios.post(`http://localhost:3001/image`, url)
+	}
+
+	const updateInput = e => {
+		if (e.code === "Enter" || e.charCode === 13) {
+			setinput(e.target.value)
+		}
 	}
 
 	useEffect(() => {
@@ -28,7 +34,7 @@ export default function Search() {
 
 	return (
 		<div>
-			<input placeholder="The moon is just the beginning" value={input.input} onChange={e => setinput(e.target.value)} ></input>
+			<input placeholder="The moon is just the beginning" onKeyPress={e => updateInput(e)} ></input>
 			<div className="s">
 				{results.map((r, i) => {
 					return <MediaCard key={i} search={r.img} addToFavourites={addToFavourites} />
